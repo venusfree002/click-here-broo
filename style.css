@@ -1,0 +1,55 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#cake-container {
+    position: relative;
+    width: 300px;
+    margin: auto;
+}
+
+#cake-image {
+    width: 100%;
+}
+
+#candles {
+    position: absolute;
+    top: 20px; /* Điều chỉnh để nến nằm trên bánh */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.candle {
+    width: 10px;
+    height: 50px;
+    background-color: yellow;
+    position: relative;
+    animation: flicker 0.2s infinite alternate; /* Hiệu ứng lung linh */
+}
+
+.candle:before {
+    content: '';
+    width: 8px;
+    height: 15px;
+    background-color: orange;
+    position: absolute;
+    top: -15px;
+    left: 1px;
+    animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.8; transform: scale(1.1); }
+}
+
+#birthday-card {
+    background-color: pink;
+    border: 2px solid #f08;
+    padding: 20px;
+    margin-top: 20px;
+}
